@@ -31,6 +31,11 @@ public class CustomerTest {
 			System.out.println(customer.getCustomerName() + "님의 현재 보너스 포인트는 " + customer.bonusPoint + "입니다.");
 		}
 		
+		if(customerE instanceof GoldCustomer) {
+			GoldCustomer vc = (GoldCustomer)customerE;
+			System.out.println(vc.showCustomerInfo());
+		}
+		
 	}
 
 }
