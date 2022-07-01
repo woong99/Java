@@ -11,8 +11,8 @@ public interface Calc {
 	int divide(int num1, int num2);
 	
 	default void description() {
-		System.out.println("정수의 사칙연산을 제공합니다.");
-		myMethod();
+		System.out.println("정수의 사칙연산을 제공합니다."); 
+ 		myMethod();
 	}
 	
 	static int total(int[] arr) {
