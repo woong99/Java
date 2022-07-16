@@ -3,6 +3,7 @@ package collection.arraylist;
 import collection.Member;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MemberArrayList {
     private ArrayList<Member> arrayList;
@@ -16,14 +17,16 @@ public class MemberArrayList {
     }
 
     public boolean removeMember(int memberID) {
-        for (int i = 0; i < arrayList.size(); i++) {
-            Member member = arrayList.get(i);
+        Iterator<Member> ir = arrayList.iterator();
+        while (ir.hasNext()) {
+            Member member = ir.next();
             int tempID = member.getMemberID();
             if (tempID == memberID) {
-                arrayList.remove(i);
+                arrayList.remove(member);
                 return true;
             }
         }
+        
         System.out.println(memberID + "기 존재하지 않습니다.");
         return false;
     }
